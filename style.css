@@ -199,7 +199,6 @@ section.contact {
   padding-bottom: 10em;
 }
 
-.skills-container,
 .experience-container,
 .projects-container,
 .contact-container {
@@ -208,6 +207,10 @@ section.contact {
   justify-content: center;
   gap: 10px;
   padding-bottom: 30px;
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* flying item */
@@ -769,6 +772,9 @@ footer.footer .copyright {
 
 /* RESPONSIVE SETTINGS */
 @media (max-width: 768px) {
+  .container {
+    padding: 0px;
+  }
   .section-wrapper {
     grid-template-columns: 1fr;
   }
@@ -788,7 +794,136 @@ footer.footer .copyright {
     padding: 0 30px;
     flex-direction: column;
   }
+  .skills-container,
+  .contact-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .experience-container,
+  .projects-container {
+    padding: 0 30px;
+    flex-direction: column;
+  }
+  .fact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  section.home {
+    padding: 100px 0;
+  }
+
+  .component .p1 {
+    max-width: 0;
+  }
+  .component .roket {
+    max-width: 100px;
+  }
+  .component .laptop {
+    max-width: 100px;
+  }
+  .panah {
+    max-width: 100px;
+    left: -10%;
+    top: -10%;
+  }
+  .presentasi {
+    max-width: 150px;
+    top: -140px;
+    right: -80px;
+  }
+  .ngoding {
+    position: absolute;
+    max-width: 150px;
+    bottom: 0px;
+    left: 0;
+  }
+  .hai {
+    max-width: 150px;
+    top: -140px;
+  }
+  .megaphone {
+    max-width: 150px;
+  }
 }
+
+@media (min-width: 469px) and (max-width: 900px) {
+  .section-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .section-wrapper-card {
+    grid-template-columns: 1fr;
+  }
+  .section-wrapper-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+  .section-achievement {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .projects-wrapper {
+    padding: 0 30px;
+    flex-direction: column;
+  }
+  .container {
+    padding: 70px;
+  }
+  section.home {
+    padding: 300px 0;
+  }
+  .projects-item {
+    max-width: 360px;
+    margin: auto;
+  }
+  .price-item {
+    padding: 40px 30px;
+  }
+  .component .p1 {
+    max-width: 220px;
+    right: 40px;
+    bottom: -30%;
+  }
+  .component .roket {
+    max-width: 200px;
+  }
+  .component .laptop {
+    max-width: 200px;
+  }
+  .panah {
+    position: absolute;
+    max-width: 200px;
+    left: -10%;
+    top: -10%;
+  }
+  .presentasi {
+    position: absolute;
+    transform: rotate(-20deg);
+    max-width: 250px;
+    top: -140px;
+    right: -80px;
+    animation: go-up 50s infinite ease;
+  }
+  .ngoding {
+    position: absolute;
+    max-width: 450px;
+    bottom: 0px;
+    left: 0;
+  }
+  .hai {
+    max-width: 250px;
+  }
+  .megaphone {
+    max-width: 250px;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   main.content {
     margin-left: 0;
@@ -800,22 +935,6 @@ footer.footer .copyright {
   }
   .hai {
     max-width: 100px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 920px;
-  }
-  section.home {
-    padding: 300px 0;
-  }
-  .projects-item {
-    max-width: 360px;
-    margin: auto;
-  }
-  .price-item {
-    padding: 40px 30px;
   }
 }
 @media (min-width: 1200px) {
